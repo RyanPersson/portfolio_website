@@ -31,6 +31,13 @@ body {
   background: rgb(44,114,187);
   background: linear-gradient(180deg, rgba(44,114,187,1) 21%, rgba(69,245,252,1) 100%);
   color: white;
+  /* margin: 0; */
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 /*ALSO needed to prevent modal:close from causeing background and content to shift. */
@@ -89,6 +96,10 @@ iframe {
     -o-background-size: cover;
     background-size: cover;
     margin: auto 0;
+  }
+  /* Lets jumbotron expand to fit text on small mobile screens. */
+  .jumbotron {
+    height: auto;
   }
 
 }
