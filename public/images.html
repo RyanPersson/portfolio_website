@@ -5,6 +5,7 @@
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="referrer" content="origin"> <!--Added to fix formspree submit error-->
 
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -21,43 +22,46 @@
 <body>
 
   <!-- #region Navbar from bootstrap -->
-  <nav class="zone navbar-header navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="#">RyanPersson.dev</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+    <!-- #region Navbar from bootstrap -->
+    <nav class="zone navbar-header navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="ryanpersson.dev">RyanPersson.dev</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item active">
-          <a class="nav-link" href="#">My Photography<span class="sr-only">(current)</span></a>
-        </li>
-        <!-- #TODO Navbar Dropdown: Implement later -->
-        <!-- <li class="nav-item dropdown">
-                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                          data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          My Projects
-                      </a>
-                      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                          <a class="dropdown-item" href="#">P1</a>
-                          <a class="dropdown-item" href="#">P2</a>
-                          <a class="dropdown-item" href="#">P3</a>
-                      </div>
-                  </li> -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="ryanpersson.dev">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">My Photography<span class="sr-only">(current)</span></a>
+                </li>
+                <!-- #TODO Navbar Dropdown: Implement later -->
+                <!-- <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        My Projects
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">P1</a>
+                        <a class="dropdown-item" href="#">P2</a>
+                        <a class="dropdown-item" href="#">P3</a>
+                    </div>
+                </li> -->
 
-        <!--Add this later-->
-        <!-- <li class="nav-item active">
-                      <a class="nav-link" href="index.html">My Photography<span class="sr-only">(current)</span></a>
-                  </li> -->
-      </ul>
-      <a class="btn btn-secondary m-2" href="#" role="button">Contact Me</a>
-    </div>
-  </nav>
-  <!-- #endregion -->
+                <!--Add this later-->
+                <!-- <li class="nav-item active">
+                    <a class="nav-link" href="index.html">My Photography<span class="sr-only">(current)</span></a>
+                </li> -->
+            </ul>
+            <button type="button" class="btn btn-secondary m-2" data-toggle="modal" data-target="#exampleModal">
+                Contact Me
+            </button>
+        </div>
+    </nav>
+    <!-- #endregion -->
 
 
   <!-- #region Image Carousel -->
