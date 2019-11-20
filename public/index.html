@@ -17,11 +17,12 @@ Date: 11/2/2019 -->
     <!--FontAwesome CSS-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+    <!-- My CSS -->
     <link rel="stylesheet" type="text/css" href="style.css">
     <title>Portfolio Page</title>
 </head>
 
-<body>
+<body id="main">
     <!-- #region Navbar from bootstrap -->
     <nav class="zone navbar-header sticky-top navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand" href="#">RyanPersson.dev</a>
@@ -33,9 +34,13 @@ Date: 11/2/2019 -->
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
                 </li>
-                <li class="nav-item dropdown">
+                <li class="nav-item active">
+                    <a class="nav-link" href="images.html">My Photography<span class="sr-only">(current)</span></a>
+                </li>
+                <!-- #TODO Navbar Dropdown: Implement later -->
+                <!-- <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         My Projects
@@ -45,24 +50,58 @@ Date: 11/2/2019 -->
                         <a class="dropdown-item" href="#">P2</a>
                         <a class="dropdown-item" href="#">P3</a>
                     </div>
-                </li>
-                <a class="btn btn-secondary float-left" href="#" role="button">Contact Me</a>
+                </li> -->
+
                 <!--Add this later-->
                 <!-- <li class="nav-item active">
                     <a class="nav-link" href="index.html">My Photography<span class="sr-only">(current)</span></a>
                 </li> -->
             </ul>
+            <button type="button" class="btn btn-secondary m-2" data-toggle="modal" data-target="#exampleModal">
+                Contact Me
+            </button>
         </div>
     </nav>
     <!-- #endregion -->
 
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="contactform" action="//formspree.io/ryanpersson.dev@gmail.com" method="POST">
+                        <input type="text" name="name" placeholder="Your name">
+                        <input type="email" name="_replyto" placeholder="Your email">
+                        <textarea name="message" placeholder="Your message"></textarea>
+                        <input type="submit" value="Send">
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Jumbotron -->
     <div class="jumbotron jumbotron-fluid">
         <div class="container">
             <h1 class="display-4">My Portfolio Website</h1>
             <p class="lead">This website showcases some of the projects I've developed on my own and in university.</p>
-            <a class="btn btn-secondary" href="#" role="button">My Resume</a>
+            <a class="btn btn-secondary" href="resume.html" role="button">My Resume</a>
         </div>
     </div>
+
+
+
 
     <!-- Page Content -->
     <div class="container">
@@ -97,8 +136,9 @@ Date: 11/2/2019 -->
                         <h4 class="card-title">
                             <a href="#">Portfolio Website</a>
                         </h4>
-                        <p class="card-text">The website you are currently browsing. I created it in order to grow more comfortable with web development frameworks and 
-                            to make a place to showcase my other projects. 
+                        <p class="card-text">The website you are currently browsing. I created it in order to grow more
+                            comfortable with web development frameworks and
+                            to make a place to showcase my other projects.
                         </p>
                         <h4>Technologies used in this project:</h4>
                         <ul>
@@ -109,21 +149,25 @@ Date: 11/2/2019 -->
                             <li>Firebase</li>
                         </ul>
                         <a class="btn btn-primary" href="#" role="button">view live</a>
-                        <a class="btn btn-success" href="https://github.com/RyanPersson/portfolio_website/tree/master" role="button">GitHub</a>
+                        <a class="btn btn-success" href="https://github.com/RyanPersson/portfolio_website/tree/master"
+                            role="button">GitHub</a>
                     </div>
                 </div>
             </div>
             <div class="col-lg-6 mb-4">
                 <div class="card h-100">
-                    <a href="#"><img class="card-img-top cover" src="http://placehold.it/700x400" alt=""></a>
+                    <a href="#"><img class="card-img-top cover" src="images/eigenc.png" alt="eigenc"></a>
                     <div class="card-body">
                         <h4 class="card-title">
-                            <a href="#">EigenC</a>
+                            <a href="https://github.com/RyanPersson/EigenC">EigenC</a>
                         </h4>
-                        <p class="card-text">A Linear Algebra library built in C++. I built this project, in order to 
-                            gain a more intuitive understanding of how many operations in Linear Algebra work. In addition to 
-                            helping me better understand linear algebra, building this program helped me apply the knowledge 
-                            of Object Oriented programming, pointers and working with dynamic memory in C++ that I learned in school.
+                        <p class="card-text">A Linear Algebra library built in C++. I built this project, in order to
+                            gain a more intuitive understanding of how many operations in Linear Algebra work. In
+                            addition to
+                            helping me better understand linear algebra, building this program helped me apply the
+                            knowledge
+                            of Object Oriented programming, pointers and working with dynamic memory in C++ that I
+                            learned in school.
                         </p>
                         <h4>Technologies and Concepts used in this project:</h4>
                         <ul>
@@ -133,7 +177,6 @@ Date: 11/2/2019 -->
                             <li>Object Oriented Programming</li>
                             <li>Matrix operations and Linear Algebra</li>
                         </ul>
-                        <a class="btn btn-primary" href="#" role="button">view live</a>
                         <a class="btn btn-success" href="https://github.com/RyanPersson/EigenC" role="button">GitHub</a>
                     </div>
                 </div>
@@ -146,8 +189,8 @@ Date: 11/2/2019 -->
                             <a href="gradient/gradient.html">CSS Gradient Generator</a>
                         </h4>
                         <p class="card-text">A web app which allows you to experiment with creating different CSS
-                             gradients. When you find one which fits your theme, you can directly copy the CSS to use 
-                             on your stylesheet.
+                            gradients. When you find one which fits your theme, you can directly copy the CSS to use
+                            on your stylesheet.
                         </p>
                         <h4>Technologies and Concepts used in this project:</h4>
                         <ul>
@@ -155,21 +198,28 @@ Date: 11/2/2019 -->
                             <li>Javascript</li>
                         </ul>
                         <a class="btn btn-primary" href="gradient/gradient.html" role="button">view live</a>
-                        <a class="btn btn-success" href="#" role="button">GitHub</a>
+                        <a class="btn btn-success"
+                            href="https://github.com/RyanPersson/portfolio_website/tree/master/public/gradient"
+                            role="button">GitHub</a>
                     </div>
                 </div>
             </div>
             <div class="col-lg-6 mb-4">
                 <div class="card h-100">
-                    <a href="#"><img class="card-img-top cover" src="http://placehold.it/700x400" alt=""></a>
+                    <a href="#"><img class="card-img-top cover"
+                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Legendrepolynomials6.svg/1200px-Legendrepolynomials6.svg.png"
+                            alt="Legendre Polynomials"></a>
                     <div class="card-body">
                         <h4 class="card-title">
                             <a href="#">Gramm Schmidt Normalization in Numpy</a>
                         </h4>
                         <p class="card-text">This program uses the Gramm Schmidt process to take in an arbitrary basis
-                            for a finite vector space and output a Linearly Independent Basis which spans the vector space.
-                            In the example pictured, the arbitrary vector space is that of Polynomials of degree 0 - n. When 
-                            an integral inner product is used, this generates the Legendre Polynomials which act as a basis for 
+                            for a finite vector space and output a Linearly Independent Basis which spans the vector
+                            space.
+                            In the example pictured, the arbitrary vector space is that of Polynomials of degree 0 - n.
+                            When
+                            an integral inner product is used, this generates the Legendre Polynomials which act as a
+                            basis for
                             anaylitical functions (functions describable as a taylor maclaurin series) in R^n.
                         </p>
                         <h4>Technologies and Concepts used in this project:</h4>
@@ -181,8 +231,36 @@ Date: 11/2/2019 -->
                             <li>Mathematical Simulation</li>
                             <li>Vectorization in python</li>
                         </ul>
-                        <a class="btn btn-primary" href="#" role="button">view live</a>
                         <a class="btn btn-success" href="#" role="button">GitHub</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 mb-4">
+                <div class="card h-100">
+                    <a href="#"><img class="card-img-top cover" src="images/data_structures.png"
+                            alt="data structures"></a>
+                    <div class="card-body">
+                        <h4 class="card-title">
+                            <a href="#">Data Structures</a>
+                        </h4>
+                        <p class="card-text">Various useful data structures implemented in C. The purpose of this
+                            project was to
+                            both develop a better understanding of working in C and to gain experience building and
+                            working with several
+                            data structures.
+                        </p>
+                        <h4>Technologies and Concepts used in this project:</h4>
+                        <ul>
+                            <li>C</li>
+                            <li>Lists</li>
+                            <li>Stacks</li>
+                            <li>Queues</li>
+                            <li>Dynamic Arrays</li>
+                            <li>Binary Search Trees</li>
+                        </ul>
+                        <a class="btn btn-success"
+                            href="https://github.com/RyanPersson/Projects/blob/master/data_structures"
+                            role="button">GitHub</a>
                     </div>
                 </div>
             </div>
@@ -191,40 +269,16 @@ Date: 11/2/2019 -->
                     <a href="#"><img class="card-img-top cover" src="http://placehold.it/700x400" alt=""></a>
                     <div class="card-body">
                         <h4 class="card-title">
-                            <a href="#">Project One</a>
+                            <a href="https://github.com/RyanPersson/Projects/tree/master/linear_regression">Linear
+                                Regression in C++</a>
                         </h4>
-                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra
-                            euismod odio, gravida pellentesque urna varius vitae.</p>
-                        <a class="btn btn-primary" href="#" role="button">view live</a>
-                        <a class="btn btn-success" href="#" role="button">GitHub</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-6 mb-4">
-                <div class="card h-100">
-                    <a href="#"><img class="card-img-top cover" src="http://placehold.it/700x400" alt=""></a>
-                    <div class="card-body">
-                        <h4 class="card-title">
-                            <a href="#">Project One</a>
-                        </h4>
-                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra
-                            euismod odio, gravida pellentesque urna varius vitae.</p>
-                        <a class="btn btn-primary" href="#" role="button">view live</a>
-                        <a class="btn btn-success" href="#" role="button">GitHub</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-6 mb-4">
-                <div class="card h-100">
-                    <a href="#"><img class="card-img-top cover" src="" alt=""></a>
-                    <div class="card-body">
-                        <h4 class="card-title">
-                            <a href="#">Project One</a>
-                        </h4>
-                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra
-                            euismod odio, gravida pellentesque urna varius vitae.</p>
-                        <a class="btn btn-primary" href="#" role="button">view live</a>
-                        <a class="btn btn-success" href="#" role="button">GitHub</a>
+                        <p class="card-text">This was one of my first programs in C++. It takes in a set of data points
+                            in R^2 and performs
+                            linear regression on them.
+                        </p>
+                        <a class="btn btn-success"
+                            href="https://github.com/RyanPersson/Projects/tree/master/linear_regression"
+                            role="button">GitHub</a>
                     </div>
                 </div>
             </div>
@@ -260,8 +314,7 @@ Date: 11/2/2019 -->
             </li>
         </ul> -->
 
-    </div>
-    <!-- /.container -->
+    </div><!-- /.container -->
     <!-- #region footer -->
     <footer class="page-footer font-small special-color-dark">
         <!--Footer Elements-->
