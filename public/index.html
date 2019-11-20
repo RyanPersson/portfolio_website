@@ -9,7 +9,8 @@ Date: 11/2/2019 -->
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="referrer" content="origin"> <!--Added to fix formspree submit error-->
+    <meta name="referrer" content="origin">
+    <!--Added to fix formspree submit error-->
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -80,40 +81,39 @@ Date: 11/2/2019 -->
                         <div class="col-lg-2"></div>
                         <!--Buffers column on left-->
                         <div class="col-lg-8 m-2">
-                           
-                                <input type="hidden" name="_next" value="#" />
-                                <input type="hidden" name="_subject" value="New submission!" />
-                                <input type="text" name="_gotcha" style="display:none" />
 
-                                <div class="form-group">
-                                    <label for="InputName">Your Name</label>
-                                    <input type="text" class="form-control" name="name" id="InputName"
-                                        placeholder="Enter Name" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="InputEmail">Your Email</label>
+                            <input type="hidden" name="_next" value="#" />
+                            <input type="hidden" name="_subject" value="New submission!" />
+                            <input type="text" name="_gotcha" style="display:none" />
 
-                                    <input type="email" class="form-control" id="InputEmail" name="_replyto"
-                                        placeholder="Enter Email" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="InputMessage">Message</label>
+                            <div class="form-group">
+                                <label for="InputName">Your Name</label>
+                                <input type="text" class="form-control" name="name" id="InputName"
+                                    placeholder="Enter Name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="InputEmail">Your Email</label>
 
-                                    <textarea name="InputMessage" id="InputMessage" class="form-control" rows="5"
-                                        required></textarea>
-                                </div>
-                               
+                                <input type="email" class="form-control" id="InputEmail" name="_replyto"
+                                    placeholder="Enter Email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="InputMessage">Message</label>
+
+                                <textarea name="InputMessage" id="InputMessage" class="form-control" rows="5"
+                                    required></textarea>
+                            </div>
+
 
                         </div>
                         <hr class="hidden-lg">
                     </div>
-                
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
 
-                    <input type="submit" name="submit" id="submit" value="SUBMIT"
-                                    class="btn btn-info pull-right">
-                </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
+                        <input type="submit" name="submit" id="submit" value="SUBMIT" class="btn btn-info pull-right">
+                    </div>
                 </form>
             </div>
         </div>
@@ -142,7 +142,11 @@ Date: 11/2/2019 -->
 
             <!-- <div class="col-lg-6 mb-4">
                 <div class="card h-100">
-                    <a href="#"><img class="card-img-top cover" src="http://placehold.it/700x400" alt=""></a>
+                    <div class="img-holder">
+                        <div class="sub-img-holder">
+                            <img class="card-img-top cover" src="http://placehold.it/700x400" alt="">
+                        </div>
+                    </div>
                     <div class="card-body">
                         <h4 class="card-title">
                             <a href="#">Project One</a>
@@ -159,7 +163,11 @@ Date: 11/2/2019 -->
 
             <div class="col-lg-6 mb-4">
                 <div class="card h-100">
-                    <a href="#"><img class="card-img-top cover" src="images/webpage.png" alt="This Webpage"></a>
+                    <div class="img-holder">
+                        <div class="sub-img-holder">
+                            <img class="card-img-top cover" src="images/webpage.png" alt="This Webpage">
+                        </div>
+                    </div>
                     <div class="card-body">
                         <h4 class="card-title">
                             <a href="#">Portfolio Website</a>
@@ -184,7 +192,11 @@ Date: 11/2/2019 -->
             </div>
             <div class="col-lg-6 mb-4">
                 <div class="card h-100">
-                    <a href="#"><img class="card-img-top cover" src="images/eigenc.png" alt="eigenc"></a>
+                    <div class="img-holder">
+                        <div class="sub-img-holder">
+                            <img class="card-img-top cover" src="images/eigenc.png" alt="eigenc">
+                        </div>
+                    </div>
                     <div class="card-body">
                         <h4 class="card-title">
                             <a href="https://github.com/RyanPersson/EigenC">EigenC</a>
@@ -211,7 +223,11 @@ Date: 11/2/2019 -->
             </div>
             <div class="col-lg-6 mb-4">
                 <div class="card h-100">
-                    <a href="#"><img class="card-img-top cover" src="images/gradient.png" alt="gradient"></a>
+                    <div class="img-holder">
+                        <div class="sub-img-holder">
+                            <img class="card-img-top cover" src="images/gradient.png" alt="gradient">
+                        </div>
+                    </div>
                     <div class="card-body">
                         <h4 class="card-title">
                             <a href="gradient/gradient.html">CSS Gradient Generator</a>
@@ -234,12 +250,16 @@ Date: 11/2/2019 -->
             </div>
             <div class="col-lg-6 mb-4">
                 <div class="card h-100">
-                    <a href="#"><img class="card-img-top cover"
-                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Legendrepolynomials6.svg/1200px-Legendrepolynomials6.svg.png"
-                            alt="Legendre Polynomials"></a>
+                    <div class="img-holder">
+                        <div class="sub-img-holder">
+                            <img class="card-img-top cover"
+                                src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Legendrepolynomials6.svg/1200px-Legendrepolynomials6.svg.png"
+                                alt="Legendre Polynomials">
+                        </div>
+                    </div>
                     <div class="card-body">
                         <h4 class="card-title">
-                            <a href="#">Gramm Schmidt Normalization in Numpy</a>
+                            <a href="https://github.com/RyanPersson/Projects/tree/master/gram_schmidt">Gramm Schmidt Normalization in Numpy</a>
                         </h4>
                         <p class="card-text">This program uses the Gramm Schmidt process to take in an arbitrary basis
                             for a finite vector space and output a Linearly Independent Basis which spans the vector
@@ -259,17 +279,23 @@ Date: 11/2/2019 -->
                             <li>Mathematical Simulation</li>
                             <li>Vectorization in python</li>
                         </ul>
-                        <a class="btn btn-success" href="#" role="button">GitHub</a>
+                        <a class="btn btn-success"
+                            href="https://github.com/RyanPersson/Projects/tree/master/gram_schmidt"
+                            role="button">GitHub</a>
                     </div>
                 </div>
             </div>
             <div class="col-lg-6 mb-4">
                 <div class="card h-100">
-                    <a href="#"><img class="card-img-top cover" src="images/data_structures.png"
-                            alt="data structures"></a>
+                    <div class="img-holder">
+                        <div class="sub-img-holder">
+                            <img class="card-img-top cover" src="images/data_structures.png" alt="data structures">
+                        </div>
+                    </div>
                     <div class="card-body">
                         <h4 class="card-title">
-                            <a href="#">Data Structures</a>
+                            <a href="https://github.com/RyanPersson/Projects/blob/master/data_structures">Data
+                                Structures</a>
                         </h4>
                         <p class="card-text">Various useful data structures implemented in C. The purpose of this
                             project was to
@@ -294,7 +320,11 @@ Date: 11/2/2019 -->
             </div>
             <div class="col-lg-6 mb-4">
                 <div class="card h-100">
-                    <a href="#"><img class="card-img-top cover" src="http://placehold.it/700x400" alt=""></a>
+                    <div class="img-holder">
+                        <div class="sub-img-holder">
+                            <img class="card-img-top cover" src="http://placehold.it/700x400" alt="">
+                        </div>
+                    </div>
                     <div class="card-body">
                         <h4 class="card-title">
                             <a href="https://github.com/RyanPersson/Projects/tree/master/linear_regression">Linear

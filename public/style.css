@@ -39,6 +39,20 @@ body {
   padding-right: 0 !important;
 }
 
+/*Cover and img holder act together to preserve aspect ratio*/
+.cover {
+  object-fit: cover;
+  align-items: stretch;
+}
+
+.img-holder {
+  width: 100%;
+  padding-bottom: 66%;
+  overflow: hidden;
+  display: flex;
+  height: 0;
+}
+
 
 
 /*Sizes iframe in resume page */
@@ -68,6 +82,13 @@ iframe {
 @media only screen and (max-width: 700px) {
   #main {
     background: url(images/background_thin.jpg) no-repeat center center fixed;
+    width: 100%;
+    height: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    margin: auto 0;
   }
 
 }
