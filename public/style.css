@@ -13,6 +13,8 @@ body {
   min-height: 100vh;
   position: relative;
   margin: 0;
+  overflow-y: scroll; /*Added to prevent modal from causing background to jump when removing scroll bar */
+  overflow-x: hidden !important;
 }
 
 .zone , .card {
@@ -30,6 +32,13 @@ body {
   background: linear-gradient(180deg, rgba(44,114,187,1) 21%, rgba(69,245,252,1) 100%);
   color: white;
 }
+
+/*ALSO needed to prevent modal:close from causeing background and content to shift. */
+.modal-open {
+  overflow-y: scroll;
+  padding-right: 0 !important;
+}
+
 
 
 /*Sizes iframe in resume page */
