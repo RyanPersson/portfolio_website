@@ -5,7 +5,8 @@
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="referrer" content="origin"> <!--Added to fix formspree submit error-->
+  <meta name="referrer" content="origin">
+  <!--Added to fix formspree submit error-->
 
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -22,24 +23,24 @@
 <body>
 
   <!-- #region Navbar from bootstrap -->
-    <!-- #region Navbar from bootstrap -->
-    <nav class="zone navbar-header navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="ryanpersson.dev">RyanPersson.dev</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+  <!-- #region Navbar from bootstrap -->
+  <nav class="zone navbar-header navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="ryanpersson.dev">RyanPersson.dev</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="ryanpersson.dev">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">My Photography<span class="sr-only">(current)</span></a>
-                </li>
-                <!-- #TODO Navbar Dropdown: Implement later -->
-                <!-- <li class="nav-item dropdown">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="ryanpersson.dev">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="#">My Photography<span class="sr-only">(current)</span></a>
+        </li>
+        <!-- #TODO Navbar Dropdown: Implement later -->
+        <!-- <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         My Projects
@@ -51,18 +52,68 @@
                     </div>
                 </li> -->
 
-                <!--Add this later-->
-                <!-- <li class="nav-item active">
+        <!--Add this later-->
+        <!-- <li class="nav-item active">
                     <a class="nav-link" href="index.html">My Photography<span class="sr-only">(current)</span></a>
                 </li> -->
-            </ul>
-            <button type="button" class="btn btn-secondary m-2" data-toggle="modal" data-target="#exampleModal">
-                Contact Me
-            </button>
-        </div>
-    </nav>
-    <!-- #endregion -->
+      </ul>
+      <button type="button" class="btn btn-secondary m-2" data-toggle="modal" data-target="#exampleModal">
+        Contact Me
+      </button>
+    </div>
+  </nav>
+  <!-- #endregion -->
 
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <form role="form" action="http://formspree.io/ryanpersson.dev@gmail.com" method="POST">
+          <div class="row">
+            <div class="col-lg-2"></div>
+            <!--Buffers column on left-->
+            <div class="col-lg-8 m-2">
+
+              <input type="hidden" name="_next" value="#" />
+              <input type="hidden" name="_subject" value="New submission!" />
+              <input type="text" name="_gotcha" style="display:none" />
+
+              <div class="form-group">
+                <label for="InputName">Your Name</label>
+                <input type="text" class="form-control" name="name" id="InputName" placeholder="Enter Name" required>
+              </div>
+              <div class="form-group">
+                <label for="InputEmail">Your Email</label>
+
+                <input type="email" class="form-control" id="InputEmail" name="_replyto" placeholder="Enter Email"
+                  required>
+              </div>
+              <div class="form-group">
+                <label for="InputMessage">Message</label>
+
+                <textarea name="InputMessage" id="InputMessage" class="form-control" rows="5" required></textarea>
+              </div>
+
+
+            </div>
+            <hr class="hidden-lg">
+          </div>
+
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
+            <input type="submit" name="submit" id="submit" value="SUBMIT" class="btn btn-info pull-right">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
 
   <!-- #region Image Carousel -->
   <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
@@ -158,7 +209,7 @@
 
   <!-- #endregion -->
 
- 
+
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
